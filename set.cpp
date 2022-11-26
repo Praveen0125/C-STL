@@ -1,5 +1,7 @@
 // Set -- sorted and unique
 #include<bits/stdc++.h>
+#include<iostream>
+#include<algorithm>
 using namespace std;
 
 int main(){
@@ -20,12 +22,8 @@ int main(){
     // cout<<s.count(2);
 
     set<int> st{2,5,6,3,1,2,7,5};  // {1,2,3,5,6,7}
-    // auto a = st.find(2);
-    // auto b = st.find(5);
-    // st.erase(a,b);                 // erases from start to last-1 i.e., (2,3)
-    // cout<<st.size();
-    auto lt = st.lower_bound(2);
-    auto lt = st.upper_bound(5);
+    auto a = st.find(2);
+    auto b = st.find(5);
+    st.erase(a,b);                 // erases from start to last-1 i.e., (2,3)
     cout<<st.size();
-
 }
